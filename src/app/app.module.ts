@@ -6,17 +6,26 @@ import { NavComponent } from './nav/nav.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AgGridModule }  from "ag-grid-angular";
+import { CarComponent } from './car/car.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
+ import { APP_ROUTES_PROVIDER } from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    CarComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule.forRoot(),
+    APP_ROUTES_PROVIDER,
     AgGridModule.withComponents([ ])
     
   ],

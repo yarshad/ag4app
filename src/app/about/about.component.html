@@ -1,0 +1,59 @@
+<p>
+  about works!
+</p>
+
+<div class="row">
+    <div class="col">
+      <button class="btn btn-info btn-sm">Info</button>
+      <button class="btn btn-success btn-sm">Success</button>
+      <button class="btn btn-warning btn-sm">Warning</button>
+      <button class="btn btn-danger btn-sm">Danger</button>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="row">
+    <div class="col-4">
+  
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+        </label>
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+        </label>
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+        </label>
+      </div>
+    
+    </div>
+    <div class="col-4">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item">Action - 1</button>
+          <button class="dropdown-item">Another Action</button>
+          <button class="dropdown-item">Something else is here</button>
+        </div>
+  
+    </div>
+    </div>
+  
+    <div class="col-4">
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+            <button class="input-group-addon" (click)="d.toggle()" type="button">
+              <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+            </button>
+          </div>
+        </div>
+      </form>    
+    </div>
+  
+    
+  </div>
